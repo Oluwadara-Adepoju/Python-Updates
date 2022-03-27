@@ -4,7 +4,13 @@
   To  create a queues, we use collections.deque which was designed to have fast appends and pops from both ends. '''
 
 from collections import deque
-a_queue = deque(['MircoSoft', 'Google' , 'Apple' , 'Meta' , 'Netflix']
+a_queue = deque(['Mircosoft', 'Google' , 'Apple' , 'Meta' , 'Netflix'])
 
 a_queue.append('Sony')
 a_queue.append('Samsung')
+print(a_queue)
+a_queue.pop()#removes the last digit
+a_queue.popleft()# removes the first
+# i actually find this feature abit unnessary  because instead of creating a queue
+#  just to access the first element, i could just use a_queue.pop(0) and thats do the same thing
+print(a_queue)
