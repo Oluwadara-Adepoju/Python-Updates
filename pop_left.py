@@ -14,5 +14,5 @@ a_queue.popleft()# removes the first
 # i actually find this feature abit unnessary  because instead of creating a queue
 #  just to access the first element, i could just use a_queue.pop(0) and that will do the same thing
 
-#Unless ,i'm missing the poin here
+#Unless ,i'm missing the point here
 print(a_queue)
