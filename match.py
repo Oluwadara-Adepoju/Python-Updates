@@ -1,4 +1,4 @@
-'''python 3.10.4 introduces  Structural Pattern Matching
+'''python 3.10 introduces  Structural Pattern Matching
 this introduces the match and case  statements which can be applied in different areas
       
       Syntax and operation
@@ -13,10 +13,9 @@ this introduces the match and case  statements which can be applied in different
         case _:
             <action_wildcard>
  '''
- #for example
- ## Creating a function that helps user understan python errors
-from fileinput import filename
-from os import mkdir
+ # Example 1
+ ## Creating a function that helps user understand python errors
+
 
 
 def python_errors(error):
@@ -41,7 +40,23 @@ python_errors('KeyboardInterrupt')
 python_errors( 'NameError')
 python_errors('SyntaxError')
 
-# Second example
+#Example 2
+#Another example using the |
+def python_error(error):
+    match error:
+        case 'KeyError' |'MemoryError'| 'NameError'|'SyntaxError':
+            print('Error')
+
+        case 'KeyboardInterrupt':
+            print('Alert! Experienced Keyboard Interrupt')
+        case _:
+             print('unknown command')
+
+python_error('MemoryError')
+python_error('SyntaxError')
+python_error('Error')
+
+# Example 3
 def mac_command(command: str):# you can indicate the datatype to be used
     match command.split():
         case ['touch',filename]: # i'm not a mac book user, so some of commands maybe inaccurate
@@ -58,4 +73,8 @@ mac_command('touch error.py')
 mac_command('cp pop.py')
 mac_command('rm pop.py',)
 mac_command('t pop.py')
+
+#Example  4
+#Tuple unpacking
+
 
