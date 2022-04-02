@@ -75,6 +75,30 @@ mac_command('rm pop.py',)
 mac_command('t pop.py')
 
 #Example  4
-#Tuple unpacking
+#cardinal point
+# def cardinal_points(point: int):
+#     match point:
+#         case if range(0,45):
+#             print('North')
+#         case if range(45,90):
+#             print('NorthEast')
+#         case range(90,135):
+#             print('East')
+#         case range(135,180):
+#             print('SouthEast')
+#         case range(180,225):
+#             print('South')
+#         case range(225,270):
+#             print('SouthWest')
+#         case range(270,315):
+#             print('West')
+#         case range(315,360):
+#             print('NorthWest')
+
+# cardinal_points(30)  
+# cardinal_points(80)
+# cardinal_points(121)   
+# cardinal_points(220)   
+        
 
 
